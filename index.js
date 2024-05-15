@@ -8,7 +8,7 @@ app.use(cors({
   origin:"*"
 }))
 
-const port = 3200;
+const port = 3000;
 
 // dotENV **** It Only Works On BACKEND ****
 require('dotenv').config();
