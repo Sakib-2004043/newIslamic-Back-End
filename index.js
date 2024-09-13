@@ -21,10 +21,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // DataBase
 const mongoose = require('mongoose');
-//const DB_URL = process.env.MONGO_URL;
-const DB_URL = "mongodb://localhost:27017/islamicDB";
+const DB_URL = process.env.MONGO_URL;
 mongoose.connect(DB_URL).then(() => {
-  console.log("MongoDB Compass Is Connected.");
+  console.log(`MongoDB ${DB_URL[7]==':'?"Compass":"Atlas"} Is Connected.`);
 }).catch((error) => {
   console.log(error);
   process.exit(1);
